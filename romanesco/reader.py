@@ -2,6 +2,7 @@
 
 import numpy as np
 import tensorflow as tf
+from nltk.tokenize.regexp import RegexpTokenizer
 
 from romanesco import const as C
 
@@ -16,8 +17,11 @@ def read_words(filename: str):
         A single list for all tokens in all sentences, with sentence boundaries
         indicated by <eos> (end of sentence).
     """
+    # Use regular expression tokenization to recognize tokens
+    tokenizer = RegexpTokenizer(C.TOKEN_PATTERN)
+
     with tf.gfile.GFile(filename) as f:
-        return f.read().replace("\n", " " + C.EOS + " ").split()
+        return tokenizer.tokenize(f.read().replace("\n", " " + C.EOS + " "))
 
 
 def read(filename: str, vocab):

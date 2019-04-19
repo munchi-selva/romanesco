@@ -2,6 +2,7 @@
 
 EOS = '<eos>'
 UNK = '<unk>'
+TOKEN_PATTERN = '[,“.”?!;—]|[^,“.”?!;\s—]+' # Customized to Shakespearean text
 
 MODEL_FILENAME = 'model'
 VOCAB_FILENAME = 'vocab.json'

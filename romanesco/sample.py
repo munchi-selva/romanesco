@@ -3,6 +3,7 @@
 import os
 import sys
 import logging
+import re
 
 import numpy as np
 import tensorflow as tf
@@ -71,4 +72,10 @@ def sample(length: int, load_from: str, first_symbols: List[str] = [], **kwargs)
                     sampled_symbol = np.random.choice(range(vocab.size), p=next_symbol_probs)
 
     words = vocab.get_words(sampled_sequence)
-    return ' '.join(words).replace(' ' + C.EOS + ' ', '\n') # OPTIMIZE: remove <eos> at the very end
+
+    # Remove <EOS>
+    word_sequence = ' '.join(words).replace(' ' + C.EOS + ' ', '\n')
+
+    # Remove unnecessary whitespace (preceding punctuation)
+    word_sequence = re.sub(r'\s+([,;:!?.”)—])', r'\1', word_sequence)
+    return word_sequence

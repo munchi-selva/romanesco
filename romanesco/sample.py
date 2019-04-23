@@ -73,9 +73,16 @@ def sample(length: int, load_from: str, first_symbols: List[str] = [], **kwargs)
 
     words = vocab.get_words(sampled_sequence)
 
-    # Remove <EOS>
+    # Remove end-of-sentence markers
     word_sequence = ' '.join(words).replace(' ' + C.EOS + ' ', '\n')
 
-    # Remove unnecessary whitespace (preceding punctuation)
+    # Remove unnecessary whitespace (preceding/following punctuation)
     word_sequence = re.sub(r'\s+([,;:!?.”)—])', r'\1', word_sequence)
+    word_sequence = re.sub(r'([“(])\s+', r'\1', word_sequence)
+
+    # Convert mid-line linebreak markers to newlines
+    word_sequence = re.sub('^' + C.LBR + r'\s+', '', word_sequence)
+    word_sequence = re.sub('\s+' + C.LBR + '$', '', word_sequence)
+    word_sequence = re.sub(r'\s+' + C.LBR + r'\s+', '\n', word_sequence)
+
     return word_sequence

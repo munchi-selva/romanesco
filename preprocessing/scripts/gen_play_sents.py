@@ -18,6 +18,7 @@ import io
 import lxml.etree as ET
 import nltk
 import os
+import re
 
 
 ################################################################################
@@ -26,9 +27,9 @@ import os
 #
 # XML tags from the PlayShakespeare schema
 #
-SEVERDIA_TAG_TITLE   = "title"
-SEVERDIA_TAG_SPEECH  = "speech"
-SEVERDIA_TAG_LINE    = "line"
+PS_TAG_TITLE   = "title"
+PS_TAG_SPEECH  = "speech"
+PS_TAG_LINE    = "line"
 
 #
 # Directory and file handling
@@ -42,11 +43,12 @@ SENT_OUTPUT_EXT = ".sents"
 #
 # Output formatting
 #
-LINE_BREAK = " <LBR> "
+LINE_BREAK = "<LBR>"
 
 
 ###############################################################################
-def getPlaySents(playFilename: str, sentFilename: str, appendToFile: bool = False, includeLineBreaks: bool = False):
+def getPlaySents(playFilename: str, sentFilename: str,
+                 appendToFile: bool = False, includeLineBreaks: bool = False):
     """
     Extracts sentences for LM training from an XML-formatted Shakespeare play.
 
@@ -59,7 +61,7 @@ def getPlaySents(playFilename: str, sentFilename: str, appendToFile: bool = Fals
     :returns: The sentences
     """
     outputFilemode = "a" if appendToFile else "w"
-    lineJoinSeq = LINE_BREAK if includeLineBreaks else " "
+    lineJoinSeq = (" " + LINE_BREAK  + " ") if includeLineBreaks else " "
 
     sents = []
 
@@ -68,7 +70,7 @@ def getPlaySents(playFilename: str, sentFilename: str, appendToFile: bool = Fals
         #
         # Include the play's title as the first sentence
         #
-        sents.append(playTree.findall(SEVERDIA_TAG_TITLE)[0].text)
+        sents.append(playTree.findall(PS_TAG_TITLE)[0].text)
 
         #
         # Locate each speech in the play.
@@ -76,11 +78,11 @@ def getPlaySents(playFilename: str, sentFilename: str, appendToFile: bool = Fals
         # Split the block into individual sentences, using NLTK's sentence
         # tokenizer. This works relatively well for Shakespearean text.
         #
-        for speech in playTree.findall(SEVERDIA_TAG_SPEECH):
+        for speech in playTree.findall(PS_TAG_SPEECH):
             #
             # itertext() includes the textual content of children of the line element
             #
-            speechContent = lineJoinSeq.join([" ".join(line.itertext()) for line in speech.findall(SEVERDIA_TAG_LINE)])
+            speechContent = lineJoinSeq.join([" ".join(line.itertext()) for line in speech.findall(PS_TAG_LINE)])
             speechSents   = nltk.sent_tokenize(speechContent)
             sents += speechSents
 
@@ -103,14 +105,12 @@ def main():
     # Command-line argument processing, temporarily disabled because
     # argparse store_false isn't setting the linebreaks option to false
     #
-#    argParser = argparse.ArgumentParser(description = "Shakespearean sentence extractor")
-#    argParser.add_argument("-l", "--linebreaks",
-#                           help="include original linebreaks in extracted sentences",
-#                           action="store_false")
-#    args = argParser.parse_args()
-#    includeLineBreaks = args.linebreaks
-
-    includeLineBreaks = False
+    argParser = argparse.ArgumentParser(description = "Shakespearean sentence extractor")
+    argParser.add_argument("-l", "--linebreaks",
+                           help = "include original linebreaks in extracted sentences",
+                           action = "store_true", default = "false")
+    args = argParser.parse_args()
+    includeLineBreaks = args.linebreaks
 
     outputFileExtension = SENT_OUTPUT_EXT
     if includeLineBreaks:

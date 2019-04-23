@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 EOS = '<eos>'
+LBR = '<LBR>'
 UNK = '<unk>'
 TOKEN_PATTERN = '[,;:!?.“”()—]|[^,;:!?.“”()—\s]+'   # Customized to Shakespearean text
 

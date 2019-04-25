@@ -22,9 +22,9 @@ def get_argument_parser():
                         help='No logging output except for warnings and errors.')
     # train
     train = subparsers.add_parser('train', help='Train a language model.')
-    train.add_argument('data', help='the training data, a plain text file.')
+    train.add_argument('data', help='Training data, a plain text file.')
     train.add_argument('-e', '--epochs', type=int, default=C.NUM_EPOCHS,
-                       help='the number of training epochs. (default: %(default)s)')
+                       help='Number of training epochs. (default: %(default)s)')
     train.add_argument('-b', '--batch_size', type=int, default=C.BATCH_SIZE,
                        help='Number of sequences in a batch. (default: %(default)s)')
     train.add_argument('--num_steps', type=int, default=C.NUM_STEPS,
@@ -34,26 +34,34 @@ def get_argument_parser():
     train.add_argument('--embedding_size', type=int, default=C.EMBEDDING_SIZE,
                        help='Size of embedding vectors. (default: %(default)s)')
     train.add_argument('-v', '--vocab_max_size', type=int, default=C.VOCAB_SIZE,
-                       help='Only keep n most frequent words; treat others as <unk>. (default: %(default)s)')
+                       help='Only keep vocab_max_size most frequent words, treat others as <unk>. (default: %(default)s)')
     train.add_argument('-m', '--save_to', default=C.MODEL_PATH,
-                       help='the folder to store model files. (default: %(default)s)')
+                       help='Folder for storing model files. (default: %(default)s)')
     train.add_argument('-l', '--log_to', default=C.LOGS_PATH,
-                       help='the folder to store log files. Use for monitoring with tensorboard. (default: %(default)s)')
+                       help='Folder for storing log files. Use for monitoring with tensorboard. (default: %(default)s)')
+    train.add_argument('--val_data', default=None,
+                       help='Validation data, a plain text file. Training will stop before maximum training epochs if model stops improving on validation data.')
+    train.add_argument('--val_epochs', default=C.VAL_EPOCHS,
+                       help='How regularly (in training epochs) model performance is checked against validation data. (default: %(default)s)')
+    train.add_argument('-p', '--patience', default=C.PATIENCE,
+                       help='Number of models that show no improvement on validation data before training is stopped. (default: %(default)s)')
     # score
     score = subparsers.add_parser('score', help='Use a trained model to score a text.')
-    score.add_argument('data', help='the data to be scored, a plain text file.')
+    score.add_argument('data', help='Data to be scored, a plain text file.')
     score.add_argument('-m', '--load_from', default='model',
-                       help='the folder to load model and vocabulary files from. (default: %(default)s)')
+                       help='Folder to load model and vocabulary files from. (default: %(default)s)')
     score.add_argument('-b', '--batch_size', type=int, default=C.BATCH_SIZE,
                        help='Number of sequences in a batch. (default: %(default)s)')
+#    score.add_argument('-f', '--load_meta', action='store_true',
+#                       help='Load model from metafile')
     # sample
     sample = subparsers.add_parser('sample', help='Use a trained model to generate a new text.')
-    sample.add_argument('length', type=int, default=C.SAMPLE_LENGTH, help='the number of '
-                        'symbols to be sampled, i.e., the length of the resulting text. (default: %(default)s)')
+    sample.add_argument('length', type=int, default=C.SAMPLE_LENGTH,
+                        help='Number of symbols to be sampled, i.e., the length of the resulting text. (default: %(default)s)')
     sample.add_argument('-m', '--load_from', default=C.MODEL_PATH,
-                        help='the folder to load model and vocabulary files from. (default: %(default)s)')
+                        help='Folder to load model and vocabulary files from. (default: %(default)s)')
     sample.add_argument('-f', '--first_symbols', type=lambda s: s.split(" "), default=[],
-                        help='the first symbols of the text to be generated. (default: %(default)s)')
+                        help='First symbols of the text to be generated. (default: %(default)s)')
 
     return parser
 
@@ -63,6 +71,10 @@ def action_train(args):
     for folder in [args.save_to, args.log_to]:
         if not os.path.exists(folder):
             os.makedirs(folder)
+        if not args.val_data is None:
+            val_model_path = os.path.join(args.save_to, C.VAL_MODEL_PATH)
+            if not os.path.exists(val_model_path):
+                os.makedirs(val_model_path)
 
     # save args for inference
     config_path = os.path.join(args.save_to, C.CONFIG_FILENAME)

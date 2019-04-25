@@ -16,31 +16,35 @@ def define_computation_graph(vocab_size: int = C.VOCAB_SIZE,
     inputs = tf.placeholder(tf.int32, shape=(batch_size, num_steps), name='x')  # (batch, time)
     targets = tf.placeholder(tf.int32, shape=(batch_size, num_steps), name='y') # (batch, time)
 
-    with tf.name_scope('Embedding'):
-        embedding = tf.get_variable('word_embedding', [vocab_size, embedding_size])
-        input_embeddings = tf.nn.embedding_lookup(embedding, inputs)
+    # Place variables within a scope so values can be shared across different sessions/graphs
+    # Note: breaks backwards compatibility => score function no longer possible with old models
+    with tf.variable_scope('graph', reuse = tf.AUTO_REUSE):
+        with tf.name_scope('Embedding'):
+            embedding = tf.get_variable('word_embedding', [vocab_size, embedding_size])
+            input_embeddings = tf.nn.embedding_lookup(embedding, inputs)
 
-    with tf.name_scope('RNN'):
-        cell = tf.nn.rnn_cell.BasicLSTMCell(hidden_size, state_is_tuple=True)
-        initial_state = cell.zero_state(batch_size, tf.float32)
-        rnn_outputs, rnn_states = tf.nn.dynamic_rnn(cell, input_embeddings, initial_state=initial_state)
+        with tf.name_scope('RNN'):
+            cell = tf.nn.rnn_cell.BasicLSTMCell(hidden_size, state_is_tuple=True)
+            initial_state = cell.zero_state(batch_size, tf.float32)
+            rnn_outputs, rnn_states = tf.nn.dynamic_rnn(cell, input_embeddings, initial_state=initial_state)
+#           rnn_outputs = tf.nn.dropout(rnn_outputs, rate = 0.5)
 
-    with tf.name_scope('Final_Projection'):
-        w = tf.get_variable('w', shape=(hidden_size, vocab_size))
-        b = tf.get_variable('b', vocab_size)
-        final_projection = lambda x: tf.matmul(x, w) + b
-        logits = map_fn(final_projection, rnn_outputs)
+        with tf.name_scope('Final_Projection'):
+            w = tf.get_variable('w', shape=(hidden_size, vocab_size))
+            b = tf.get_variable('b', vocab_size)
+            final_projection = lambda x: tf.matmul(x, w) + b
+            logits = map_fn(final_projection, rnn_outputs)
 
-    with tf.name_scope('Cost'):
-        # weighted average cross-entropy (log-perplexity) per symbol
-        loss = tf.contrib.seq2seq.sequence_loss(logits=logits,
-                                                targets=targets,
-                                                weights=tf.ones([batch_size, num_steps]),
-                                                average_across_timesteps=True,
-                                                average_across_batch=True)
+        with tf.name_scope('Cost'):
+            # weighted average cross-entropy (log-perplexity) per symbol
+            loss = tf.contrib.seq2seq.sequence_loss(logits=logits,
+                                                    targets=targets,
+                                                    weights=tf.ones([batch_size, num_steps]),
+                                                    average_across_timesteps=True,
+                                                    average_across_batch=True)
 
-    with tf.name_scope('Optimizer'):
-        train_step = tf.train.AdamOptimizer(learning_rate=C.LEARNING_RATE).minimize(loss)
+        with tf.name_scope('Optimizer'):
+            train_step = tf.train.AdamOptimizer(learning_rate=C.LEARNING_RATE).minimize(loss)
 
     # Logging of cost scalar (@tensorboard)
     tf.summary.scalar('loss', loss)

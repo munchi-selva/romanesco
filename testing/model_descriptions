@@ -4,6 +4,7 @@ Romanesco:      Standard
 Training data:  Richard_II.train (ibiblio)
 Dev data:       Richard_II.test
 Preprocessing:  None
+Result:         Perplexity on test data: 1148.25
 
 
 model01
@@ -12,6 +13,7 @@ Romanesco:      Standard
 Training data:  Shakeplays.train (ibiblio)
 Dev data:       Shakeplays.dev
 Preprocessing:  None
+Result:         Perplexity on test data: 127.4
 
 
 model02
@@ -20,6 +22,7 @@ Romanesco:      Standard
 Training data:  ps_king_richard_ii.train (PlayShakespeare)
 Dev data:       ps_king_richard_ii.dev
 Preprocessing:  gen_play_sents.py
+Result:         Perplexity on test data: 2120.51
 
 
 model03
@@ -28,7 +31,7 @@ Romanesco:      Standard
 Training data:  histories.train (PlayShakespeare)
 Dev data:       histories.dev
 Preprocessing:  gen_play_sents.py
-
+Result:         Perplexity on test data: 206.76
 
 model04
 =======
@@ -36,7 +39,7 @@ Romanesco:      Vocabulary size 15000
 Training data:  histories.train (PlayShakespeare)
 Dev data:       histories.dev
 Preprocessing:  gen_play_sents.py
-Result:         Performs worse than model03
+Result:         Performs worse than model03 (Perplexity: 206.76 -> 251.32)
                 Not enough data to justify bigger vocabulary?
 
 model05
@@ -45,7 +48,8 @@ Romanesco:      Standard
 Training data:  histtrag.01.train (PlayShakespeare)
 Dev data:       histtrag.01.dev
 Preprocessing:  gen_play_sents.py
-Result:         Lower perplexity at end of training and in evaluation than model03
+Result:         Perplexity: 174.93
+                Lower perplexity at end of training and in evaluation than model03
 
 
 model06
@@ -152,7 +156,7 @@ model17
 =======
 Romanesco:      Fixed Shakespearean tokenization (() handling), including
                 linebreaks, line-leading linebreaks allowed,
-                romanesco 2.0 defaults, i.e. learning rate  0.001
+                romanesco 0.2 defaults, i.e. learning rate  0.001
                                              batch size     64
                                              num steps      100
                                              hidden size    1024
@@ -167,7 +171,7 @@ model18
 =======
 Romanesco:      Fixed Shakespearean tokenization (() handling), including
                 linebreaks, line-leading linebreaks allowed,
-                romanesco 2.0 defaults,
+                romanesco 0.2 defaults,
                 num epochs = 20
 Training data:  histtrag.01.lb.train (PlayShakespeare)
 Dev data:       histtrag.01.lb.dev
@@ -180,7 +184,7 @@ model19
 =======
 Romanesco:      Fixed Shakespearean tokenization (() handling), including
                 linebreaks, line-leading linebreaks allowed,
-                romanesco 2.0 defaults
+                romanesco 0.2 defaults
 Training data:  all.lb.train (PlayShakespeare)
 Dev data:       all.lb.dev
 Preprocessing:  gen_play_sents.py
@@ -191,7 +195,7 @@ model20
 =======
 Romanesco:      Fixed Shakespearean tokenization (() handling), including
                 linebreaks, line-leading linebreaks allowed,
-                romanesco 2.0 defaults,
+                romanesco 0.2 defaults,
                 Dropout with rate 0.5
 Training data:  all.lb.train (PlayShakespeare)
 Dev data:       all.lb.dev
@@ -205,7 +209,7 @@ model21
 =======
 Romanesco:      Fixed Shakespearean tokenization (() handling), including
                 linebreaks, line-leading linebreaks allowed,
-                romanesco 2.0 defaults,
+                romanesco 0.2 defaults,
                 Vocabulary size 12000
 Training data:  all.lb.train (PlayShakespeare)
 Dev data:       all.lb.dev
@@ -219,7 +223,7 @@ model22
 =======
 Romanesco:      Fixed Shakespearean tokenization (() handling), including
                 linebreaks, line-leading linebreaks allowed
-                romanesco 2.0 defaults,
+                romanesco 0.2 defaults,
                 hidden size 2048
 Training data:  all.lb.train (PlayShakespeare)
 Dev data:       all.lb.dev
@@ -232,7 +236,7 @@ model23
 =======
 Romanesco:      Fixed Shakespearean tokenization (() handling), including
                 linebreaks, line-leading linebreaks allowed
-                romanesco 2.0 defaults,
+                romanesco 0.2 defaults,
                 hidden size 2048,
                 Dropout with rate 0.5
 Training data:  all.lb.train (PlayShakespeare)
@@ -246,7 +250,7 @@ model24
 =======
 Romanesco:      Fixed Shakespearean tokenization (() handling), including
                 linebreaks, line-leading linebreaks allowed,
-                romanesco 2.0 defaults,
+                romanesco 0.2 defaults,
                 hidden size 2048,
                 Dropout with rate 0.2
 Training data:  all.lb.train (PlayShakespeare)
@@ -260,7 +264,7 @@ model25
 =======
 Romanesco:      Fixed Shakespearean tokenization (() handling), including
                 linebreaks, line-leading linebreaks allowed,
-                romanesco 2.0 defaults,
+                romanesco 0.2 defaults,
                 num steps 50
 Training data:  all.lb.train (PlayShakespeare)
 Dev data:       all.lb.dev
@@ -273,7 +277,7 @@ model26
 =======
 Romanesco:      Fixed Shakespearean tokenization (() handling), including
                 linebreaks, line-leading linebreaks allowed
-                romanesco 2.0 defaults,
+                romanesco 0.2 defaults,
                 epochs 50,
                 early stopping - validation at each epoch, patience 5
 Training data:  histories.lb.train (PlayShakespeare)
@@ -288,7 +292,7 @@ model27
 =======
 Romanesco:      Fixed Shakespearean tokenization (() handling), including
                 linebreaks, line-leading linebreaks allowed,
-                romanesco 2.0 defaults,
+                romanesco 0.2 defaults,
                 epochs 50,
                 early stopping - validation at each epoch, patience 5
 Training data:  all.lb.train (PlayShakespeare)
@@ -307,7 +311,7 @@ model28
 =======
 Romanesco:      Fixed Shakespearean tokenization (() handling), including
                 linebreaks, line-leading linebreaks allowed,
-                romanesco 2.0 defaults,
+                romanesco 0.2 defaults,
                 epochs 50,
                 early stopping - validation at each epoch, patience 5
 Training data:  all.lb.train (PlayShakespeare)
@@ -325,7 +329,7 @@ model29
 =======
 Romanesco:      Fixed Shakespearean tokenization (() handling), including
                 linebreaks, line-leading linebreaks allowed,
-                romanesco 2.0 defaults,
+                romanesco 0.2 defaults,
                 epochs 50,
                 hidden size 512
                 early stopping - validation at each epoch, patience 5
@@ -339,3 +343,92 @@ Result:         Stopped after 39 epochs due to no additional improvement, i.e
                 Perplexity on validation data: 79.83
                 Perplexity on test data: 75.52
                 (Slow as HELL, diminishing returns when model is too small)
+
+model30
+=======
+Romanesco:      Fixed Shakespearean tokenization (() handling), including
+                linebreaks, line-leading linebreaks allowed,
+                romanesco 0.2 defaults,
+                epochs 50,
+                hidden size 2048,
+                early stopping - validation at each epoch, patience 5
+Training data:  all.lb.train (PlayShakespeare)
+Dev data:       all.lb.val
+Test data:      all.lb.test
+Preprocessing:  gen_play_sents.py
+Result:         Stopped after 13 epochs due to no additional improvement, i.e
+                best validation performance at epoch 8
+                Perplexity on training data: 53.85
+                Perplexity on validation data: 80.62
+                Perplexity on test data: 75.99
+
+model31
+=======
+Romanesco:      Fixed Shakespearean tokenization (() handling), including
+                linebreaks, line-leading linebreaks allowed,
+                romanesco 0.2 defaults,
+                epochs 50,
+                Vocabulary size 12000,
+                early stopping - validation at each epoch, patience 5
+Training data:  all.lb.train (PlayShakespeare)
+Dev data:       all.lb.val
+Test data:      all.lb.test
+Preprocessing:  gen_play_sents.py
+Result:         Stopped after epochs due to no additional improvement, i.e
+                best validation performance at epoch 
+                Perplexity on training data: 54.53
+                Perplexity on validation data: 83.30
+                Perplexity on test data: 79.31
+
+
+model32
+=======
+Romanesco:      Fixed Shakespearean tokenization (() handling), including
+                linebreaks, line-leading linebreaks allowed,
+                romanesco 0.2 defaults,
+                epochs 50,
+                second hidden layer, size = 512
+                early stopping - validation at each epoch, patience 5
+Training data:  histories.lb.train (PlayShakespeare)
+Dev data:       histories.lb.dev
+Test data:      histories.lb.dev
+Preprocessing:  gen_play_sents.py
+Result:         Terminated before training completed (used to test that hidden
+                layer stacking was working)
+
+
+model33
+=======
+Romanesco:      Fixed Shakespearean tokenization (() handling), including
+                linebreaks, line-leading linebreaks allowed,
+                romanesco 0.2 defaults,
+                epochs 50,
+                second hidden layer, size = 512
+                early stopping - validation at each epoch, patience 5
+Training data:  all.lb.train (PlayShakespeare)
+Dev data:       all.lb.val
+Test data:      all.lb.test
+Preprocessing:  gen_play_sents.py
+Result:         Reaches 50 epochs. :-/
+                Perplexity on training data: 86.96
+                Perplexity on validation data: 106.67
+                Perplexity on test data: 101.84
+
+
+model34
+=======
+Romanesco:      Fixed Shakespearean tokenization (() handling), including
+                linebreaks, line-leading linebreaks allowed,
+                romanesco 0.2 defaults,
+                epochs 50,
+                batch size = 32,
+                early stopping - validation at each epoch, patience 5
+Training data:  histories.lb.train (PlayShakespeare)
+Dev data:       histories.lb.dev
+Test data:      histories.lb.dev
+Preprocessing:  gen_play_sents.py
+Result:         Stopped after 13 epochs due to no additional improvement, i.e
+                best validation performance at epoch 8
+                Perplexity on training data: 51.88
+                Perplexity on validation data: 77.06
+                Perplexity on test data: 73.39

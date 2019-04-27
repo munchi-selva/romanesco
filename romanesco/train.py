@@ -49,9 +49,6 @@ def train(data: str,
     early_stopping = val_data is not None
 
     if early_stopping:
-#        val_model_path = os.path.join(save_to, C.VAL_MODEL_PATH)
-#        vocab.save(os.path.join(val_model_path, C.VOCAB_FILENAME))
-
         # convert validation data to word ids,
         # find number of RNN time steps and batch size suitable for this data set
         val_raw_data = reader.read(val_data, vocab)
@@ -96,17 +93,7 @@ def train(data: str,
             save_model = True
 
             if early_stopping and epoch % val_epochs == 0:
-                # Check what the current model's loss is on the validation data
-                memory_used = session.run(tf.contrib.memory_stats.BytesInUse())
-                logging.debug("Before checking validation data, bytes in use: %d", memory_used)
-
-                # Save the latest model so it can be tested against the validation dataset
-#                val_model_path = os.path.join(save_to, C.VAL_MODEL_PATH)
-#                saver.save(session, os.path.join(val_model_path, C.VAL_MODEL_FILENAME))
-#                latest_val_loss = score(val_data,
-#                                        load_from = val_model_path,
-#                                        model_filename = C.VAL_MODEL_FILENAME,
-#                                        load_meta = True)
+                # check the current model's loss on the validation data
                 total_val_loss = 0.0
                 total_val_iter = 0
                 for x, y in reader.iterate(val_raw_data, val_batch_size, val_num_steps):
@@ -114,9 +101,6 @@ def train(data: str,
                     total_val_loss += l[0]
                     total_val_iter += 1
                 latest_val_loss = np.exp(total_val_loss / total_val_iter)
-
-                memory_used = session.run(tf.contrib.memory_stats.BytesInUse())
-                logging.debug("After score, bytes in use: %d", memory_used)
 
                 logging.info("Current model perplexity on validation data: %.2f", latest_val_loss)
                 if latest_val_loss < best_val_loss:

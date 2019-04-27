@@ -52,8 +52,6 @@ def get_argument_parser():
                        help='Folder to load model and vocabulary files from. (default: %(default)s)')
     score.add_argument('-b', '--batch_size', type=int, default=C.BATCH_SIZE,
                        help='Number of sequences in a batch. (default: %(default)s)')
-#    score.add_argument('-f', '--load_meta', action='store_true',
-#                       help='Load model from metafile')
     # sample
     sample = subparsers.add_parser('sample', help='Use a trained model to generate a new text.')
     sample.add_argument('length', type=int, default=C.SAMPLE_LENGTH,

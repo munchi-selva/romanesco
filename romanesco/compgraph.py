@@ -27,7 +27,6 @@ def define_computation_graph(vocab_size: int = C.VOCAB_SIZE,
             cell = tf.nn.rnn_cell.BasicLSTMCell(hidden_size, state_is_tuple=True)
             initial_state = cell.zero_state(batch_size, tf.float32)
             rnn_outputs, rnn_states = tf.nn.dynamic_rnn(cell, input_embeddings, initial_state=initial_state)
-#           rnn_outputs = tf.nn.dropout(rnn_outputs, rate = 0.5)
 
         with tf.name_scope('Final_Projection'):
             w = tf.get_variable('w', shape=(hidden_size, vocab_size))

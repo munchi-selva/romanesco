@@ -1,7 +1,7 @@
 # romanesco
 
-A vanilla recurrent neural network (RNN) language model. Supports model
-training, text scoring, and text generation.
+A vanilla recurrent neural network (RNN) language model, optimized for Shakespearean texts.
+Supports model training, text scoring, and text generation.
 
 ## Installation
 

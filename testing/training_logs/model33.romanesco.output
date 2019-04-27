@@ -1,0 +1,219 @@
+nohup: ignoring input
+2019-04-26 12:51:05,636 - INFO - Namespace(action='train', batch_size=64, data='/home/munchi/u04/data/all.lb.train', embedding_size=256, epochs=50, hidden_size=1024, log_to='/home/munchi/u04/results/training_logs/model33', num_steps=100, patience=5, quiet=False, save_to='/home/munchi/u04/results/models/model33', val_data='/home/munchi/u04/data/all.lb.val', val_epochs=1, vocab_max_size=10000)
+2019-04-26 12:51:05,637 - INFO - Saving model config to '/home/munchi/u04/results/models/model33/config.json'.
+2019-04-26 12:51:10.054115: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-04-26 12:51:12.086263: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-04-26 12:51:12.086917: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55c87b747180 executing computations on platform CUDA. Devices:
+2019-04-26 12:51:12.086953: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): Tesla K80, Compute Capability 3.7
+2019-04-26 12:51:12.089578: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2019-04-26 12:51:12.090355: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55c87b7b1140 executing computations on platform Host. Devices:
+2019-04-26 12:51:12.090405: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-04-26 12:51:12.090729: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:04.0
+totalMemory: 11.17GiB freeMemory: 11.10GiB
+2019-04-26 12:51:12.090751: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-04-26 12:51:12.091531: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-26 12:51:12.091550: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-04-26 12:51:12.091557: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-04-26 12:51:12.091860: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10802 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:04.0, compute capability: 3.7)
+2019-04-26 12:51:14.884290: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+2019-04-26 12:52:24,509 - DEBUG - Epoch=1, iteration=100
+2019-04-26 12:53:06,861 - INFO - Perplexity on training data after epoch 1: 504.83
+2019-04-26 12:53:08,052 - INFO - Current model perplexity on validation data: 416.21
+2019-04-26 12:53:08,053 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 12:54:17,997 - DEBUG - Epoch=2, iteration=100
+2019-04-26 12:55:00,306 - INFO - Perplexity on training data after epoch 2: 357.25
+2019-04-26 12:55:01,403 - INFO - Current model perplexity on validation data: 282.18
+2019-04-26 12:55:01,403 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 12:56:11,224 - DEBUG - Epoch=3, iteration=100
+2019-04-26 12:56:53,589 - INFO - Perplexity on training data after epoch 3: 268.10
+2019-04-26 12:56:54,693 - INFO - Current model perplexity on validation data: 233.22
+2019-04-26 12:56:54,693 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 12:58:04,538 - DEBUG - Epoch=4, iteration=100
+2019-04-26 12:58:46,878 - INFO - Perplexity on training data after epoch 4: 229.41
+2019-04-26 12:58:47,979 - INFO - Current model perplexity on validation data: 210.47
+2019-04-26 12:58:47,979 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 12:59:57,784 - DEBUG - Epoch=5, iteration=100
+2019-04-26 13:00:40,123 - INFO - Perplexity on training data after epoch 5: 212.39
+2019-04-26 13:00:41,220 - INFO - Current model perplexity on validation data: 199.52
+2019-04-26 13:00:41,220 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:01:51,033 - DEBUG - Epoch=6, iteration=100
+2019-04-26 13:02:33,346 - INFO - Perplexity on training data after epoch 6: 202.65
+2019-04-26 13:02:34,450 - INFO - Current model perplexity on validation data: 192.21
+2019-04-26 13:02:34,450 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:03:44,707 - DEBUG - Epoch=7, iteration=100
+2019-04-26 13:04:27,078 - INFO - Perplexity on training data after epoch 7: 195.52
+2019-04-26 13:04:28,172 - INFO - Current model perplexity on validation data: 186.39
+2019-04-26 13:04:28,172 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:05:38,308 - DEBUG - Epoch=8, iteration=100
+2019-04-26 13:06:20,693 - INFO - Perplexity on training data after epoch 8: 189.81
+2019-04-26 13:06:21,797 - INFO - Current model perplexity on validation data: 181.90
+2019-04-26 13:06:21,797 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:07:31,948 - DEBUG - Epoch=9, iteration=100
+2019-04-26 13:08:14,355 - INFO - Perplexity on training data after epoch 9: 184.95
+2019-04-26 13:08:15,444 - INFO - Current model perplexity on validation data: 178.85
+2019-04-26 13:08:15,444 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:09:25,697 - DEBUG - Epoch=10, iteration=100
+2019-04-26 13:10:08,023 - INFO - Perplexity on training data after epoch 10: 180.04
+2019-04-26 13:10:09,125 - INFO - Current model perplexity on validation data: 174.26
+2019-04-26 13:10:09,125 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:11:18,839 - DEBUG - Epoch=11, iteration=100
+2019-04-26 13:12:01,127 - INFO - Perplexity on training data after epoch 11: 174.52
+2019-04-26 13:12:02,228 - INFO - Current model perplexity on validation data: 168.24
+2019-04-26 13:12:02,228 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:13:12,174 - DEBUG - Epoch=12, iteration=100
+2019-04-26 13:13:54,686 - INFO - Perplexity on training data after epoch 12: 166.08
+2019-04-26 13:13:55,789 - INFO - Current model perplexity on validation data: 159.91
+2019-04-26 13:13:55,790 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:15:05,871 - DEBUG - Epoch=13, iteration=100
+2019-04-26 13:15:48,313 - INFO - Perplexity on training data after epoch 13: 159.07
+2019-04-26 13:15:49,418 - INFO - Current model perplexity on validation data: 153.88
+2019-04-26 13:15:49,418 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:16:59,275 - DEBUG - Epoch=14, iteration=100
+2019-04-26 13:17:41,524 - INFO - Perplexity on training data after epoch 14: 153.45
+2019-04-26 13:17:42,635 - INFO - Current model perplexity on validation data: 149.49
+2019-04-26 13:17:42,635 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:18:52,375 - DEBUG - Epoch=15, iteration=100
+2019-04-26 13:19:34,701 - INFO - Perplexity on training data after epoch 15: 148.32
+2019-04-26 13:19:35,807 - INFO - Current model perplexity on validation data: 145.94
+2019-04-26 13:19:35,807 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:20:45,585 - DEBUG - Epoch=16, iteration=100
+2019-04-26 13:21:27,909 - INFO - Perplexity on training data after epoch 16: 144.01
+2019-04-26 13:21:29,001 - INFO - Current model perplexity on validation data: 142.77
+2019-04-26 13:21:29,001 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:22:38,820 - DEBUG - Epoch=17, iteration=100
+2019-04-26 13:23:21,147 - INFO - Perplexity on training data after epoch 17: 140.31
+2019-04-26 13:23:22,237 - INFO - Current model perplexity on validation data: 139.71
+2019-04-26 13:23:22,237 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:24:32,466 - DEBUG - Epoch=18, iteration=100
+2019-04-26 13:25:14,689 - INFO - Perplexity on training data after epoch 18: 136.85
+2019-04-26 13:25:15,788 - INFO - Current model perplexity on validation data: 137.07
+2019-04-26 13:25:15,788 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:26:25,883 - DEBUG - Epoch=19, iteration=100
+2019-04-26 13:27:08,120 - INFO - Perplexity on training data after epoch 19: 133.95
+2019-04-26 13:27:09,210 - INFO - Current model perplexity on validation data: 135.06
+2019-04-26 13:27:09,211 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:28:19,368 - DEBUG - Epoch=20, iteration=100
+2019-04-26 13:29:01,563 - INFO - Perplexity on training data after epoch 20: 131.37
+2019-04-26 13:29:02,659 - INFO - Current model perplexity on validation data: 132.63
+2019-04-26 13:29:02,659 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:30:12,792 - DEBUG - Epoch=21, iteration=100
+2019-04-26 13:30:55,208 - INFO - Perplexity on training data after epoch 21: 129.42
+2019-04-26 13:30:56,292 - INFO - Current model perplexity on validation data: 131.35
+2019-04-26 13:30:56,292 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:32:06,603 - DEBUG - Epoch=22, iteration=100
+2019-04-26 13:32:48,925 - INFO - Perplexity on training data after epoch 22: 127.43
+2019-04-26 13:32:50,020 - INFO - Current model perplexity on validation data: 129.69
+2019-04-26 13:32:50,021 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:34:00,373 - DEBUG - Epoch=23, iteration=100
+2019-04-26 13:34:42,576 - INFO - Perplexity on training data after epoch 23: 125.29
+2019-04-26 13:34:43,679 - INFO - Current model perplexity on validation data: 127.68
+2019-04-26 13:34:43,679 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:35:53,992 - DEBUG - Epoch=24, iteration=100
+2019-04-26 13:36:36,340 - INFO - Perplexity on training data after epoch 24: 123.62
+2019-04-26 13:36:37,451 - INFO - Current model perplexity on validation data: 126.91
+2019-04-26 13:36:37,452 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:37:47,759 - DEBUG - Epoch=25, iteration=100
+2019-04-26 13:38:30,174 - INFO - Perplexity on training data after epoch 25: 121.57
+2019-04-26 13:38:31,270 - INFO - Current model perplexity on validation data: 124.94
+2019-04-26 13:38:31,270 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:39:41,401 - DEBUG - Epoch=26, iteration=100
+2019-04-26 13:40:23,837 - INFO - Perplexity on training data after epoch 26: 119.76
+2019-04-26 13:40:24,927 - INFO - Current model perplexity on validation data: 123.49
+2019-04-26 13:40:24,927 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:41:34,977 - DEBUG - Epoch=27, iteration=100
+2019-04-26 13:42:17,349 - INFO - Perplexity on training data after epoch 27: 117.62
+2019-04-26 13:42:18,498 - INFO - Current model perplexity on validation data: 122.28
+2019-04-26 13:42:18,498 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:43:28,563 - DEBUG - Epoch=28, iteration=100
+2019-04-26 13:44:10,948 - INFO - Perplexity on training data after epoch 28: 115.95
+2019-04-26 13:44:12,051 - INFO - Current model perplexity on validation data: 120.88
+2019-04-26 13:44:12,051 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:45:21,989 - DEBUG - Epoch=29, iteration=100
+2019-04-26 13:46:04,086 - INFO - Perplexity on training data after epoch 29: 113.96
+2019-04-26 13:46:05,166 - INFO - Current model perplexity on validation data: 119.79
+2019-04-26 13:46:05,167 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:47:14,501 - DEBUG - Epoch=30, iteration=100
+2019-04-26 13:47:56,907 - INFO - Perplexity on training data after epoch 30: 112.34
+2019-04-26 13:47:58,002 - INFO - Current model perplexity on validation data: 118.32
+2019-04-26 13:47:58,002 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:49:08,083 - DEBUG - Epoch=31, iteration=100
+2019-04-26 13:49:50,198 - INFO - Perplexity on training data after epoch 31: 110.44
+2019-04-26 13:49:51,293 - INFO - Current model perplexity on validation data: 116.85
+2019-04-26 13:49:51,294 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:51:01,171 - DEBUG - Epoch=32, iteration=100
+2019-04-26 13:51:43,397 - INFO - Perplexity on training data after epoch 32: 108.83
+2019-04-26 13:51:44,485 - INFO - Current model perplexity on validation data: 116.21
+2019-04-26 13:51:44,486 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:52:54,589 - DEBUG - Epoch=33, iteration=100
+2019-04-26 13:53:36,955 - INFO - Perplexity on training data after epoch 33: 107.36
+2019-04-26 13:53:38,054 - INFO - Current model perplexity on validation data: 114.94
+2019-04-26 13:53:38,054 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:54:48,288 - DEBUG - Epoch=34, iteration=100
+2019-04-26 13:55:30,631 - INFO - Perplexity on training data after epoch 34: 105.98
+2019-04-26 13:55:31,723 - INFO - Current model perplexity on validation data: 115.33
+2019-04-26 13:56:41,285 - DEBUG - Epoch=35, iteration=100
+2019-04-26 13:57:23,701 - INFO - Perplexity on training data after epoch 35: 104.13
+2019-04-26 13:57:24,797 - INFO - Current model perplexity on validation data: 112.83
+2019-04-26 13:57:24,797 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 13:58:35,279 - DEBUG - Epoch=36, iteration=100
+2019-04-26 13:59:17,678 - INFO - Perplexity on training data after epoch 36: 102.46
+2019-04-26 13:59:18,774 - INFO - Current model perplexity on validation data: 111.55
+2019-04-26 13:59:18,775 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 14:00:29,150 - DEBUG - Epoch=37, iteration=100
+2019-04-26 14:01:11,338 - INFO - Perplexity on training data after epoch 37: 101.02
+2019-04-26 14:01:12,424 - INFO - Current model perplexity on validation data: 111.19
+2019-04-26 14:01:12,424 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 14:02:22,503 - DEBUG - Epoch=38, iteration=100
+2019-04-26 14:03:04,891 - INFO - Perplexity on training data after epoch 38: 100.29
+2019-04-26 14:03:05,995 - INFO - Current model perplexity on validation data: 110.48
+2019-04-26 14:03:05,995 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 14:04:15,886 - DEBUG - Epoch=39, iteration=100
+2019-04-26 14:04:57,994 - INFO - Perplexity on training data after epoch 39: 99.22
+2019-04-26 14:04:59,077 - INFO - Current model perplexity on validation data: 110.94
+2019-04-26 14:06:08,084 - DEBUG - Epoch=40, iteration=100
+2019-04-26 14:06:50,304 - INFO - Perplexity on training data after epoch 40: 97.85
+2019-04-26 14:06:51,406 - INFO - Current model perplexity on validation data: 110.31
+2019-04-26 14:06:51,406 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 14:08:00,902 - DEBUG - Epoch=41, iteration=100
+2019-04-26 14:08:43,175 - INFO - Perplexity on training data after epoch 41: 96.35
+2019-04-26 14:08:44,323 - INFO - Current model perplexity on validation data: 110.90
+2019-04-26 14:09:53,626 - DEBUG - Epoch=42, iteration=100
+2019-04-26 14:10:35,872 - INFO - Perplexity on training data after epoch 42: 94.97
+2019-04-26 14:10:36,969 - INFO - Current model perplexity on validation data: 109.48
+2019-04-26 14:10:36,969 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 14:11:46,523 - DEBUG - Epoch=43, iteration=100
+2019-04-26 14:12:28,820 - INFO - Perplexity on training data after epoch 43: 93.90
+2019-04-26 14:12:29,913 - INFO - Current model perplexity on validation data: 107.95
+2019-04-26 14:12:29,913 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 14:13:39,694 - DEBUG - Epoch=44, iteration=100
+2019-04-26 14:14:22,071 - INFO - Perplexity on training data after epoch 44: 93.22
+2019-04-26 14:14:23,176 - INFO - Current model perplexity on validation data: 108.81
+2019-04-26 14:15:32,651 - DEBUG - Epoch=45, iteration=100
+2019-04-26 14:16:14,945 - INFO - Perplexity on training data after epoch 45: 92.07
+2019-04-26 14:16:16,050 - INFO - Current model perplexity on validation data: 108.12
+2019-04-26 14:17:25,699 - DEBUG - Epoch=46, iteration=100
+2019-04-26 14:18:08,149 - INFO - Perplexity on training data after epoch 46: 90.82
+2019-04-26 14:18:09,239 - INFO - Current model perplexity on validation data: 106.51
+2019-04-26 14:18:09,239 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 14:19:19,132 - DEBUG - Epoch=47, iteration=100
+2019-04-26 14:20:01,412 - INFO - Perplexity on training data after epoch 47: 89.54
+2019-04-26 14:20:02,486 - INFO - Current model perplexity on validation data: 106.07
+2019-04-26 14:20:02,486 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 14:21:12,249 - DEBUG - Epoch=48, iteration=100
+2019-04-26 14:21:54,618 - INFO - Perplexity on training data after epoch 48: 88.52
+2019-04-26 14:21:55,714 - INFO - Current model perplexity on validation data: 107.07
+2019-04-26 14:23:05,189 - DEBUG - Epoch=49, iteration=100
+2019-04-26 14:23:47,573 - INFO - Perplexity on training data after epoch 49: 87.70
+2019-04-26 14:23:48,665 - INFO - Current model perplexity on validation data: 107.45
+2019-04-26 14:24:58,285 - DEBUG - Epoch=50, iteration=100
+2019-04-26 14:25:40,634 - INFO - Perplexity on training data after epoch 50: 86.96
+2019-04-26 14:25:41,732 - INFO - Current model perplexity on validation data: 106.67
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+

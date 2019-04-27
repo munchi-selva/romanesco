@@ -1,0 +1,42 @@
+2019-04-18 11:12:24.431792: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+
+2019-04-18 11:13:06,555 - DEBUG - Epoch=1, iteration=100
+2019-04-18 11:13:47,521 - DEBUG - Epoch=1, iteration=200
+2019-04-18 11:14:28,642 - DEBUG - Epoch=1, iteration=300
+2019-04-18 11:14:48,688 - INFO - Perplexity on training data after epoch 1: 1458.11
+2019-04-18 11:15:30,822 - DEBUG - Epoch=2, iteration=100
+2019-04-18 11:16:11,702 - DEBUG - Epoch=2, iteration=200
+2019-04-18 11:16:52,615 - DEBUG - Epoch=2, iteration=300
+2019-04-18 11:17:12,697 - INFO - Perplexity on training data after epoch 2: 849.10
+2019-04-18 11:17:57,324 - DEBUG - Epoch=3, iteration=100
+2019-04-18 11:18:38,325 - DEBUG - Epoch=3, iteration=200
+2019-04-18 11:19:19,437 - DEBUG - Epoch=3, iteration=300
+2019-04-18 11:19:39,654 - INFO - Perplexity on training data after epoch 3: 647.49
+2019-04-18 11:20:24,241 - DEBUG - Epoch=4, iteration=100
+2019-04-18 11:21:05,219 - DEBUG - Epoch=4, iteration=200
+2019-04-18 11:21:46,377 - DEBUG - Epoch=4, iteration=300
+2019-04-18 11:22:06,436 - INFO - Perplexity on training data after epoch 4: 520.92
+2019-04-18 11:22:50,933 - DEBUG - Epoch=5, iteration=100
+2019-04-18 11:23:31,876 - DEBUG - Epoch=5, iteration=200
+2019-04-18 11:24:12,804 - DEBUG - Epoch=5, iteration=300
+2019-04-18 11:24:32,933 - INFO - Perplexity on training data after epoch 5: 436.54
+2019-04-18 11:25:17,418 - DEBUG - Epoch=6, iteration=100
+2019-04-18 11:25:58,480 - DEBUG - Epoch=6, iteration=200
+2019-04-18 11:26:39,456 - DEBUG - Epoch=6, iteration=300
+2019-04-18 11:26:59,477 - INFO - Perplexity on training data after epoch 6: 378.14
+2019-04-18 11:27:43,904 - DEBUG - Epoch=7, iteration=100
+2019-04-18 11:28:24,796 - DEBUG - Epoch=7, iteration=200
+2019-04-18 11:29:05,690 - DEBUG - Epoch=7, iteration=300
+2019-04-18 11:29:25,755 - INFO - Perplexity on training data after epoch 7: 336.54
+2019-04-18 11:30:10,416 - DEBUG - Epoch=8, iteration=100
+2019-04-18 11:30:51,431 - DEBUG - Epoch=8, iteration=200
+2019-04-18 11:31:32,375 - DEBUG - Epoch=8, iteration=300
+2019-04-18 11:31:52,396 - INFO - Perplexity on training data after epoch 8: 305.21
+2019-04-18 11:32:37,175 - DEBUG - Epoch=9, iteration=100
+2019-04-18 11:33:18,154 - DEBUG - Epoch=9, iteration=200
+2019-04-18 11:33:59,091 - DEBUG - Epoch=9, iteration=300
+2019-04-18 11:34:19,209 - INFO - Perplexity on training data after epoch 9: 280.01
+2019-04-18 11:35:03,722 - DEBUG - Epoch=10, iteration=100
+2019-04-18 11:35:44,912 - DEBUG - Epoch=10, iteration=200
+2019-04-18 11:36:25,967 - DEBUG - Epoch=10, iteration=300
+2019-04-18 11:36:46,093 - INFO - Perplexity on training data after epoch 10: 258.61

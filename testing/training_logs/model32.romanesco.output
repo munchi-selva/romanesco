@@ -1,0 +1,54 @@
+nohup: ignoring input
+2019-04-26 12:42:19,426 - INFO - Namespace(action='train', batch_size=64, data='/home/munchi/u04/data/histories.lb.train', embedding_size=256, epochs=50, hidden_size=1024, log_to='/home/munchi/u04/results/training_logs/model32', num_steps=100, patience=5, quiet=False, save_to='/home/munchi/u04/results/models/model32', val_data='/home/munchi/u04/data/histories.lb.dev', val_epochs=1, vocab_max_size=12000)
+2019-04-26 12:42:19,426 - INFO - Saving model config to '/home/munchi/u04/results/models/model32/config.json'.
+2019-04-26 12:42:22.980910: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-04-26 12:42:25.027923: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-04-26 12:42:25.028528: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5644c87ccff0 executing computations on platform CUDA. Devices:
+2019-04-26 12:42:25.029221: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): Tesla K80, Compute Capability 3.7
+2019-04-26 12:42:25.032092: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2019-04-26 12:42:25.032831: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5644c8836fc0 executing computations on platform Host. Devices:
+2019-04-26 12:42:25.032858: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-04-26 12:42:25.033201: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:04.0
+totalMemory: 11.17GiB freeMemory: 11.10GiB
+2019-04-26 12:42:25.033251: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-04-26 12:42:25.033993: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-26 12:42:25.034012: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-04-26 12:42:25.034019: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-04-26 12:42:25.034268: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10802 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:04.0, compute capability: 3.7)
+2019-04-26 12:42:27.738453: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+2019-04-26 12:43:03,569 - INFO - Perplexity on training data after epoch 1: 844.08
+2019-04-26 12:43:04,801 - INFO - Current model perplexity on validation data: 435.68
+2019-04-26 12:43:04,802 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 12:43:40,900 - INFO - Perplexity on training data after epoch 2: 521.89
+2019-04-26 12:43:42,075 - INFO - Current model perplexity on validation data: 425.42
+2019-04-26 12:43:42,075 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 12:44:18,414 - INFO - Perplexity on training data after epoch 3: 521.92
+2019-04-26 12:44:19,588 - INFO - Current model perplexity on validation data: 421.71
+2019-04-26 12:44:19,588 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 12:44:56,414 - INFO - Perplexity on training data after epoch 4: 517.45
+2019-04-26 12:44:57,582 - INFO - Current model perplexity on validation data: 421.83
+2019-04-26 12:45:33,250 - INFO - Perplexity on training data after epoch 5: 517.21
+2019-04-26 12:45:34,418 - INFO - Current model perplexity on validation data: 422.49
+2019-04-26 12:46:10,085 - INFO - Perplexity on training data after epoch 6: 515.82
+2019-04-26 12:46:11,253 - INFO - Current model perplexity on validation data: 419.51
+2019-04-26 12:46:11,253 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 12:46:47,639 - INFO - Perplexity on training data after epoch 7: 504.86
+2019-04-26 12:46:48,810 - INFO - Current model perplexity on validation data: 406.27
+2019-04-26 12:46:48,811 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 12:47:25,243 - INFO - Perplexity on training data after epoch 8: 478.50
+2019-04-26 12:47:26,418 - INFO - Current model perplexity on validation data: 370.85
+2019-04-26 12:47:26,419 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 12:48:02,495 - INFO - Perplexity on training data after epoch 9: 428.74
+2019-04-26 12:48:03,665 - INFO - Current model perplexity on validation data: 340.68
+2019-04-26 12:48:03,665 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 12:48:39,764 - INFO - Perplexity on training data after epoch 10: 403.73
+2019-04-26 12:48:40,939 - INFO - Current model perplexity on validation data: 327.20
+2019-04-26 12:48:40,939 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 12:49:17,010 - INFO - Perplexity on training data after epoch 11: 389.48
+2019-04-26 12:49:18,188 - INFO - Current model perplexity on validation data: 314.87
+2019-04-26 12:49:18,188 - INFO - Lowest perplexity on validation data achieved
+2019-04-26 12:49:54,293 - INFO - Perplexity on training data after epoch 12: 372.88
+2019-04-26 12:49:55,471 - INFO - Current model perplexity on validation data: 304.68
+2019-04-26 12:49:55,471 - INFO - Lowest perplexity on validation data achieved

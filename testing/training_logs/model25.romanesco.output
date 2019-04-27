@@ -1,0 +1,67 @@
+nohup: ignoring input
+2019-04-23 19:01:15,417 - INFO - Namespace(action='train', batch_size=64, data='/home/munchi/u04/data/severdia/lb-01/all.lb.train', embedding_size=256, epochs=10, hidden_size=1024, log_to='/home/munchi/u04/results/training_logs/model25', num_steps=50, quiet=False, save_to='/home/munchi/u04/results/models/model25', vocab_max_size=10000)
+2019-04-23 19:01:15,417 - INFO - Saving model config to '/home/munchi/u04/results/models/model25/config.json'.
+2019-04-23 19:01:19.162385: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-04-23 19:01:21.163113: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-04-23 19:01:21.163752: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55f290761ed0 executing computations on platform CUDA. Devices:
+2019-04-23 19:01:21.163798: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): Tesla K80, Compute Capability 3.7
+2019-04-23 19:01:21.166389: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2019-04-23 19:01:21.166929: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55f2907cbe90 executing computations on platform Host. Devices:
+2019-04-23 19:01:21.166956: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-04-23 19:01:21.167289: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:04.0
+totalMemory: 11.17GiB freeMemory: 11.10GiB
+2019-04-23 19:01:21.167311: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-04-23 19:01:21.168324: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-23 19:01:21.168349: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-04-23 19:01:21.168357: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-04-23 19:01:21.168620: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10802 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:04.0, compute capability: 3.7)
+2019-04-23 19:01:23.522909: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+2019-04-23 19:02:05,799 - DEBUG - Epoch=1, iteration=100
+2019-04-23 19:02:47,943 - DEBUG - Epoch=1, iteration=200
+2019-04-23 19:03:30,068 - DEBUG - Epoch=1, iteration=300
+2019-04-23 19:03:43,902 - INFO - Perplexity on training data after epoch 1: 263.66
+2019-04-23 19:04:26,353 - DEBUG - Epoch=2, iteration=100
+2019-04-23 19:05:08,365 - DEBUG - Epoch=2, iteration=200
+2019-04-23 19:05:50,582 - DEBUG - Epoch=2, iteration=300
+2019-04-23 19:06:04,425 - INFO - Perplexity on training data after epoch 2: 116.97
+2019-04-23 19:06:46,882 - DEBUG - Epoch=3, iteration=100
+2019-04-23 19:07:28,755 - DEBUG - Epoch=3, iteration=200
+2019-04-23 19:08:11,140 - DEBUG - Epoch=3, iteration=300
+2019-04-23 19:08:25,036 - INFO - Perplexity on training data after epoch 3: 94.10
+2019-04-23 19:09:07,383 - DEBUG - Epoch=4, iteration=100
+2019-04-23 19:09:49,399 - DEBUG - Epoch=4, iteration=200
+2019-04-23 19:10:31,541 - DEBUG - Epoch=4, iteration=300
+2019-04-23 19:10:45,397 - INFO - Perplexity on training data after epoch 4: 81.02
+2019-04-23 19:11:27,885 - DEBUG - Epoch=5, iteration=100
+2019-04-23 19:12:09,981 - DEBUG - Epoch=5, iteration=200
+2019-04-23 19:12:52,379 - DEBUG - Epoch=5, iteration=300
+2019-04-23 19:13:06,398 - INFO - Perplexity on training data after epoch 5: 71.71
+2019-04-23 19:13:49,503 - DEBUG - Epoch=6, iteration=100
+2019-04-23 19:14:32,018 - DEBUG - Epoch=6, iteration=200
+2019-04-23 19:15:14,594 - DEBUG - Epoch=6, iteration=300
+2019-04-23 19:15:28,643 - INFO - Perplexity on training data after epoch 6: 64.29
+2019-04-23 19:16:11,675 - DEBUG - Epoch=7, iteration=100
+2019-04-23 19:16:54,180 - DEBUG - Epoch=7, iteration=200
+2019-04-23 19:17:36,757 - DEBUG - Epoch=7, iteration=300
+2019-04-23 19:17:50,834 - INFO - Perplexity on training data after epoch 7: 58.01
+2019-04-23 19:18:33,873 - DEBUG - Epoch=8, iteration=100
+2019-04-23 19:19:16,370 - DEBUG - Epoch=8, iteration=200
+2019-04-23 19:19:59,022 - DEBUG - Epoch=8, iteration=300
+2019-04-23 19:20:12,860 - INFO - Perplexity on training data after epoch 8: 52.60
+2019-04-23 19:20:55,737 - DEBUG - Epoch=9, iteration=100
+2019-04-23 19:21:38,203 - DEBUG - Epoch=9, iteration=200
+2019-04-23 19:22:20,646 - DEBUG - Epoch=9, iteration=300
+2019-04-23 19:22:34,667 - INFO - Perplexity on training data after epoch 9: 47.85
+2019-04-23 19:23:17,411 - DEBUG - Epoch=10, iteration=100
+2019-04-23 19:24:00,168 - DEBUG - Epoch=10, iteration=200
+2019-04-23 19:24:42,470 - DEBUG - Epoch=10, iteration=300
+2019-04-23 19:24:56,368 - INFO - Perplexity on training data after epoch 10: 43.62
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+

@@ -1,0 +1,42 @@
+nohup: ignoring input
+2019-04-23 09:07:22,290 - INFO - Namespace(action='train', batch_size=64, data='/home/munchi/u04/data/severdia/lb-01/ps_king_richard_ii.lb.dev', embedding_size=256, epochs=10, hidden_size=1024, log_to='/home/munchi/u04/results/training_logs/model16', num_steps=100, quiet=False, save_to='/home/munchi/u04/results/models/model16', vocab_max_size=10000)
+2019-04-23 09:07:22,290 - INFO - Saving model config to '/home/munchi/u04/results/models/model16/config.json'.
+2019-04-23 09:07:24.473344: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-04-23 09:07:26.459427: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-04-23 09:07:26.460027: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x563e54399fc0 executing computations on platform CUDA. Devices:
+2019-04-23 09:07:26.460599: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): Tesla K80, Compute Capability 3.7
+2019-04-23 09:07:26.463348: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2019-04-23 09:07:26.464138: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x563e54403f90 executing computations on platform Host. Devices:
+2019-04-23 09:07:26.464164: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-04-23 09:07:26.464469: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:04.0
+totalMemory: 11.17GiB freeMemory: 11.10GiB
+2019-04-23 09:07:26.464491: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-04-23 09:07:26.465214: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-23 09:07:26.465233: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-04-23 09:07:26.465240: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-04-23 09:07:26.465482: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10802 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:04.0, compute capability: 3.7)
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+Traceback (most recent call last):
+  File "/home/munchi/.local/bin/romanesco", line 7, in <module>
+    exec(compile(f.read(), __file__, 'exec'))
+  File "/home/munchi/u04/romanesco/bin/romanesco", line 119, in <module>
+    main()
+  File "/home/munchi/u04/romanesco/bin/romanesco", line 106, in main
+    action_train(args)
+  File "/home/munchi/u04/romanesco/bin/romanesco", line 72, in action_train
+    train(**vars(args))
+  File "/home/munchi/u04/romanesco/romanesco/train.py", line 45, in train
+    with tf.Session() as session:
+  File "/home/munchi/.local/lib/python3.5/site-packages/tensorflow/python/client/session.py", line 1551, in __init__
+    super(Session, self).__init__(target, graph, config=config)
+  File "/home/munchi/.local/lib/python3.5/site-packages/tensorflow/python/client/session.py", line 676, in __init__
+    self._session = tf_session.TF_NewSessionRef(self._graph._c_graph, opts)
+KeyboardInterrupt

@@ -1,0 +1,81 @@
+2019-04-18 11:46:04.254971: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+kk2019-04-18 11:46:39,087 - DEBUG - Epoch=1, iteration=100
+2019-04-18 11:47:13,768 - DEBUG - Epoch=1, iteration=200
+2019-04-18 11:47:48,531 - DEBUG - Epoch=1, iteration=300
+2019-04-18 11:48:23,268 - DEBUG - Epoch=1, iteration=400
+2019-04-18 11:48:58,074 - DEBUG - Epoch=1, iteration=500
+2019-04-18 11:49:32,829 - DEBUG - Epoch=1, iteration=600
+2019-04-18 11:50:07,653 - DEBUG - Epoch=1, iteration=700
+2019-04-18 11:50:34,727 - INFO - Perplexity on training data after epoch 1: 681.79
+2019-04-18 11:51:10,557 - DEBUG - Epoch=2, iteration=100
+2019-04-18 11:51:45,310 - DEBUG - Epoch=2, iteration=200
+2019-04-18 11:52:20,009 - DEBUG - Epoch=2, iteration=300
+2019-04-18 11:52:54,770 - DEBUG - Epoch=2, iteration=400
+2019-04-18 11:53:29,546 - DEBUG - Epoch=2, iteration=500
+2019-04-18 11:54:04,297 - DEBUG - Epoch=2, iteration=600
+2019-04-18 11:54:39,078 - DEBUG - Epoch=2, iteration=700
+2019-04-18 11:55:06,219 - INFO - Perplexity on training data after epoch 2: 364.88
+2019-04-18 11:55:43,739 - DEBUG - Epoch=3, iteration=100
+2019-04-18 11:56:18,576 - DEBUG - Epoch=3, iteration=200
+2019-04-18 11:56:53,286 - DEBUG - Epoch=3, iteration=300
+2019-04-18 11:57:28,023 - DEBUG - Epoch=3, iteration=400
+2019-04-18 11:58:02,754 - DEBUG - Epoch=3, iteration=500
+2019-04-18 11:58:37,576 - DEBUG - Epoch=3, iteration=600
+2019-04-18 11:59:12,321 - DEBUG - Epoch=3, iteration=700
+2019-04-18 11:59:39,400 - INFO - Perplexity on training data after epoch 3: 273.66
+2019-04-18 12:00:16,167 - DEBUG - Epoch=4, iteration=100
+2019-04-18 12:00:50,885 - DEBUG - Epoch=4, iteration=200
+2019-04-18 12:01:25,724 - DEBUG - Epoch=4, iteration=300
+2019-04-18 12:02:00,553 - DEBUG - Epoch=4, iteration=400
+2019-04-18 12:02:35,294 - DEBUG - Epoch=4, iteration=500
+2019-04-18 12:03:10,034 - DEBUG - Epoch=4, iteration=600
+2019-04-18 12:03:44,721 - DEBUG - Epoch=4, iteration=700
+2019-04-18 12:04:11,765 - INFO - Perplexity on training data after epoch 4: 233.34
+2019-04-18 12:04:48,428 - DEBUG - Epoch=5, iteration=100
+2019-04-18 12:05:23,273 - DEBUG - Epoch=5, iteration=200
+2019-04-18 12:05:58,008 - DEBUG - Epoch=5, iteration=300
+2019-04-18 12:06:32,846 - DEBUG - Epoch=5, iteration=400
+2019-04-18 12:07:07,518 - DEBUG - Epoch=5, iteration=500
+2019-04-18 12:07:42,289 - DEBUG - Epoch=5, iteration=600
+2019-04-18 12:08:16,986 - DEBUG - Epoch=5, iteration=700
+2019-04-18 12:08:44,075 - INFO - Perplexity on training data after epoch 5: 208.97
+2019-04-18 12:09:20,822 - DEBUG - Epoch=6, iteration=100
+2019-04-18 12:09:55,500 - DEBUG - Epoch=6, iteration=200
+2019-04-18 12:10:30,321 - DEBUG - Epoch=6, iteration=300
+2019-04-18 12:11:05,020 - DEBUG - Epoch=6, iteration=400
+2019-04-18 12:11:39,845 - DEBUG - Epoch=6, iteration=500
+2019-04-18 12:12:14,505 - DEBUG - Epoch=6, iteration=600
+2019-04-18 12:12:49,216 - DEBUG - Epoch=6, iteration=700
+2019-04-18 12:13:16,310 - INFO - Perplexity on training data after epoch 6: 191.12
+2019-04-18 12:13:53,047 - DEBUG - Epoch=7, iteration=100
+2019-04-18 12:14:27,803 - DEBUG - Epoch=7, iteration=200
+2019-04-18 12:15:02,545 - DEBUG - Epoch=7, iteration=300
+2019-04-18 12:15:37,355 - DEBUG - Epoch=7, iteration=400
+2019-04-18 12:16:12,213 - DEBUG - Epoch=7, iteration=500
+2019-04-18 12:16:47,144 - DEBUG - Epoch=7, iteration=600
+2019-04-18 12:17:22,161 - DEBUG - Epoch=7, iteration=700
+2019-04-18 12:17:49,378 - INFO - Perplexity on training data after epoch 7: 176.94
+2019-04-18 12:18:26,201 - DEBUG - Epoch=8, iteration=100
+2019-04-18 12:19:01,207 - DEBUG - Epoch=8, iteration=200
+2019-04-18 12:19:36,181 - DEBUG - Epoch=8, iteration=300
+2019-04-18 12:20:11,131 - DEBUG - Epoch=8, iteration=400
+2019-04-18 12:20:46,186 - DEBUG - Epoch=8, iteration=500
+2019-04-18 12:21:21,054 - DEBUG - Epoch=8, iteration=600
+2019-04-18 12:21:56,018 - DEBUG - Epoch=8, iteration=700
+2019-04-18 12:22:23,306 - INFO - Perplexity on training data after epoch 8: 165.08
+2019-04-18 12:23:00,193 - DEBUG - Epoch=9, iteration=100
+2019-04-18 12:23:35,125 - DEBUG - Epoch=9, iteration=200
+2019-04-18 12:24:10,039 - DEBUG - Epoch=9, iteration=300
+2019-04-18 12:24:44,951 - DEBUG - Epoch=9, iteration=400
+2019-04-18 12:25:19,933 - DEBUG - Epoch=9, iteration=500
+2019-04-18 12:25:54,950 - DEBUG - Epoch=9, iteration=600
+2019-04-18 12:26:29,929 - DEBUG - Epoch=9, iteration=700
+2019-04-18 12:26:57,204 - INFO - Perplexity on training data after epoch 9: 154.80
+2019-04-18 12:27:34,089 - DEBUG - Epoch=10, iteration=100
+2019-04-18 12:28:09,085 - DEBUG - Epoch=10, iteration=200
+2019-04-18 12:28:44,086 - DEBUG - Epoch=10, iteration=300
+2019-04-18 12:29:19,100 - DEBUG - Epoch=10, iteration=400
+2019-04-18 12:29:54,102 - DEBUG - Epoch=10, iteration=500
+2019-04-18 12:30:29,125 - DEBUG - Epoch=10, iteration=600
+2019-04-18 12:31:04,092 - DEBUG - Epoch=10, iteration=700
+2019-04-18 12:31:31,329 - INFO - Perplexity on training data after epoch 10: 145.74

@@ -1,0 +1,137 @@
+nohup: ignoring input
+2019-04-25 14:08:03,558 - INFO - Namespace(action='train', batch_size=64, data='/home/munchi/u04/data/all.lb.train', embedding_size=256, epochs=50, hidden_size=1024, log_to='/home/munchi/u04/results/training_logs/model27', num_steps=100, quiet=False, save_to='/home/munchi/u04/results/models/model27', val_data='/home/munchi/u04/data/all.lb.val', vocab_max_size=10000)
+2019-04-25 14:08:03,558 - INFO - Saving model config to '/home/munchi/u04/results/models/model27/config.json'.
+2019-04-25 14:08:07.573240: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-04-25 14:08:09.605634: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-04-25 14:08:09.606189: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5607672a20f0 executing computations on platform CUDA. Devices:
+2019-04-25 14:08:09.606245: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): Tesla K80, Compute Capability 3.7
+2019-04-25 14:08:09.609081: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2019-04-25 14:08:09.609862: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x56076730c080 executing computations on platform Host. Devices:
+2019-04-25 14:08:09.609891: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-04-25 14:08:09.610201: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:04.0
+totalMemory: 11.17GiB freeMemory: 11.10GiB
+2019-04-25 14:08:09.610224: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-04-25 14:08:09.611020: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-25 14:08:09.611043: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-04-25 14:08:09.611051: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-04-25 14:08:09.611317: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10802 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:04.0, compute capability: 3.7)
+2019-04-25 14:08:12.077890: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+2019-04-25 14:09:25,533 - DEBUG - Epoch=1, iteration=100
+2019-04-25 14:10:10,124 - INFO - Perplexity on training data after epoch 1: 485.71
+2019-04-25 14:10:10,172 - DEBUG - Before checking validation data, bytes in use: 351221248
+2019-04-25 14:10:11,522 - DEBUG - After score, bytes in use: 351509504
+2019-04-25 14:10:11,522 - INFO - Current model perplexity on validation data: 265.14
+2019-04-25 14:10:11,523 - INFO - Lowest perplexity on validation data achieved
+2019-04-25 14:11:25,366 - DEBUG - Epoch=2, iteration=100
+2019-04-25 14:12:10,068 - INFO - Perplexity on training data after epoch 2: 202.99
+2019-04-25 14:12:10,117 - DEBUG - Before checking validation data, bytes in use: 351509504
+2019-04-25 14:12:11,394 - DEBUG - After score, bytes in use: 351509504
+2019-04-25 14:12:11,395 - INFO - Current model perplexity on validation data: 151.68
+2019-04-25 14:12:11,395 - INFO - Lowest perplexity on validation data achieved
+2019-04-25 14:13:25,538 - DEBUG - Epoch=3, iteration=100
+2019-04-25 14:14:10,249 - INFO - Perplexity on training data after epoch 3: 136.13
+2019-04-25 14:14:10,296 - DEBUG - Before checking validation data, bytes in use: 351509504
+2019-04-25 14:14:11,577 - DEBUG - After score, bytes in use: 351509504
+2019-04-25 14:14:11,578 - INFO - Current model perplexity on validation data: 120.86
+2019-04-25 14:14:11,578 - INFO - Lowest perplexity on validation data achieved
+2019-04-25 14:15:25,767 - DEBUG - Epoch=4, iteration=100
+2019-04-25 14:16:10,547 - INFO - Perplexity on training data after epoch 4: 112.90
+2019-04-25 14:16:10,595 - DEBUG - Before checking validation data, bytes in use: 351509504
+2019-04-25 14:16:11,880 - DEBUG - After score, bytes in use: 351509504
+2019-04-25 14:16:11,880 - INFO - Current model perplexity on validation data: 105.24
+2019-04-25 14:16:11,880 - INFO - Lowest perplexity on validation data achieved
+2019-04-25 14:17:25,934 - DEBUG - Epoch=5, iteration=100
+2019-04-25 14:18:10,750 - INFO - Perplexity on training data after epoch 5: 97.08
+2019-04-25 14:18:10,799 - DEBUG - Before checking validation data, bytes in use: 351509504
+2019-04-25 14:18:12,086 - DEBUG - After score, bytes in use: 351509504
+2019-04-25 14:18:12,087 - INFO - Current model perplexity on validation data: 95.35
+2019-04-25 14:18:12,087 - INFO - Lowest perplexity on validation data achieved
+2019-04-25 14:19:26,099 - DEBUG - Epoch=6, iteration=100
+2019-04-25 14:20:10,875 - INFO - Perplexity on training data after epoch 6: 86.47
+2019-04-25 14:20:10,923 - DEBUG - Before checking validation data, bytes in use: 351509504
+2019-04-25 14:20:12,204 - DEBUG - After score, bytes in use: 351509504
+2019-04-25 14:20:12,204 - INFO - Current model perplexity on validation data: 89.61
+2019-04-25 14:20:12,204 - INFO - Lowest perplexity on validation data achieved
+2019-04-25 14:21:26,690 - DEBUG - Epoch=7, iteration=100
+2019-04-25 14:22:11,438 - INFO - Perplexity on training data after epoch 7: 78.77
+2019-04-25 14:22:11,485 - DEBUG - Before checking validation data, bytes in use: 351509504
+2019-04-25 14:22:12,779 - DEBUG - After score, bytes in use: 351509504
+2019-04-25 14:22:12,780 - INFO - Current model perplexity on validation data: 85.70
+2019-04-25 14:22:12,780 - INFO - Lowest perplexity on validation data achieved
+2019-04-25 14:23:27,239 - DEBUG - Epoch=8, iteration=100
+2019-04-25 14:24:12,009 - INFO - Perplexity on training data after epoch 8: 72.66
+2019-04-25 14:24:12,057 - DEBUG - Before checking validation data, bytes in use: 351509504
+2019-04-25 14:24:13,348 - DEBUG - After score, bytes in use: 351509504
+2019-04-25 14:24:13,348 - INFO - Current model perplexity on validation data: 83.15
+2019-04-25 14:24:13,348 - INFO - Lowest perplexity on validation data achieved
+2019-04-25 14:25:27,161 - DEBUG - Epoch=9, iteration=100
+2019-04-25 14:26:12,009 - INFO - Perplexity on training data after epoch 9: 67.57
+2019-04-25 14:26:12,059 - DEBUG - Before checking validation data, bytes in use: 351509504
+2019-04-25 14:26:13,344 - DEBUG - After score, bytes in use: 351509504
+2019-04-25 14:26:13,344 - INFO - Current model perplexity on validation data: 81.24
+2019-04-25 14:26:13,344 - INFO - Lowest perplexity on validation data achieved
+2019-04-25 14:27:27,527 - DEBUG - Epoch=10, iteration=100
+2019-04-25 14:28:12,469 - INFO - Perplexity on training data after epoch 10: 63.19
+2019-04-25 14:28:12,522 - DEBUG - Before checking validation data, bytes in use: 351509504
+2019-04-25 14:28:13,809 - DEBUG - After score, bytes in use: 351509504
+2019-04-25 14:28:13,810 - INFO - Current model perplexity on validation data: 80.01
+2019-04-25 14:28:13,810 - INFO - Lowest perplexity on validation data achieved
+2019-04-25 14:29:28,002 - DEBUG - Epoch=11, iteration=100
+2019-04-25 14:30:12,799 - INFO - Perplexity on training data after epoch 11: 59.30
+2019-04-25 14:30:12,852 - DEBUG - Before checking validation data, bytes in use: 351509504
+2019-04-25 14:30:14,152 - DEBUG - After score, bytes in use: 351509504
+2019-04-25 14:30:14,153 - INFO - Current model perplexity on validation data: 79.07
+2019-04-25 14:30:14,153 - INFO - Lowest perplexity on validation data achieved
+2019-04-25 14:31:28,165 - DEBUG - Epoch=12, iteration=100
+2019-04-25 14:32:12,913 - INFO - Perplexity on training data after epoch 12: 55.90
+2019-04-25 14:32:12,968 - DEBUG - Before checking validation data, bytes in use: 351509504
+2019-04-25 14:32:14,262 - DEBUG - After score, bytes in use: 351509504
+2019-04-25 14:32:14,262 - INFO - Current model perplexity on validation data: 78.73
+2019-04-25 14:32:14,263 - INFO - Lowest perplexity on validation data achieved
+2019-04-25 14:33:28,280 - DEBUG - Epoch=13, iteration=100
+2019-04-25 14:34:13,070 - INFO - Perplexity on training data after epoch 13: 52.75
+2019-04-25 14:34:13,122 - DEBUG - Before checking validation data, bytes in use: 351509504
+2019-04-25 14:34:14,420 - DEBUG - After score, bytes in use: 351509504
+2019-04-25 14:34:14,420 - INFO - Current model perplexity on validation data: 78.11
+2019-04-25 14:34:14,421 - INFO - Lowest perplexity on validation data achieved
+2019-04-25 14:35:28,313 - DEBUG - Epoch=14, iteration=100
+2019-04-25 14:36:13,180 - INFO - Perplexity on training data after epoch 14: 49.82
+2019-04-25 14:36:13,234 - DEBUG - Before checking validation data, bytes in use: 351509504
+2019-04-25 14:36:14,514 - DEBUG - After score, bytes in use: 351509504
+2019-04-25 14:36:14,514 - INFO - Current model perplexity on validation data: 77.94
+2019-04-25 14:36:14,514 - INFO - Lowest perplexity on validation data achieved
+2019-04-25 14:37:28,394 - DEBUG - Epoch=15, iteration=100
+2019-04-25 14:38:13,259 - INFO - Perplexity on training data after epoch 15: 47.12
+2019-04-25 14:38:13,316 - DEBUG - Before checking validation data, bytes in use: 351509504
+2019-04-25 14:38:14,680 - DEBUG - After score, bytes in use: 351509504
+2019-04-25 14:38:14,681 - INFO - Current model perplexity on validation data: 78.19
+2019-04-25 14:39:28,135 - DEBUG - Epoch=16, iteration=100
+2019-04-25 14:40:12,886 - INFO - Perplexity on training data after epoch 16: 44.65
+2019-04-25 14:40:12,937 - DEBUG - Before checking validation data, bytes in use: 351509504
+2019-04-25 14:40:14,230 - DEBUG - After score, bytes in use: 351509504
+2019-04-25 14:40:14,230 - INFO - Current model perplexity on validation data: 78.58
+2019-04-25 14:41:27,735 - DEBUG - Epoch=17, iteration=100
+2019-04-25 14:42:12,454 - INFO - Perplexity on training data after epoch 17: 42.45
+2019-04-25 14:42:12,507 - DEBUG - Before checking validation data, bytes in use: 351509504
+2019-04-25 14:42:13,790 - DEBUG - After score, bytes in use: 351509504
+2019-04-25 14:42:13,790 - INFO - Current model perplexity on validation data: 79.70
+2019-04-25 14:43:27,297 - DEBUG - Epoch=18, iteration=100
+2019-04-25 14:44:12,063 - INFO - Perplexity on training data after epoch 18: 40.33
+2019-04-25 14:44:12,115 - DEBUG - Before checking validation data, bytes in use: 351509504
+2019-04-25 14:44:13,410 - DEBUG - After score, bytes in use: 351509504
+2019-04-25 14:44:13,410 - INFO - Current model perplexity on validation data: 80.17
+2019-04-25 14:45:26,877 - DEBUG - Epoch=19, iteration=100
+2019-04-25 14:46:11,620 - INFO - Perplexity on training data after epoch 19: 38.30
+2019-04-25 14:46:11,673 - DEBUG - Before checking validation data, bytes in use: 351509504
+2019-04-25 14:46:13,058 - DEBUG - After score, bytes in use: 351509504
+2019-04-25 14:46:13,058 - INFO - Current model perplexity on validation data: 81.38
+2019-04-25 14:46:13,058 - INFO - No improvement in validation data perplexity for 5 epochs: terminating training
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+

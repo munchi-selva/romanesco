@@ -1,0 +1,40 @@
+2019-04-18 09:49:07,235 - DEBUG - Epoch=1, iteration=100
+2019-04-18 09:49:41,185 - DEBUG - Epoch=1, iteration=200
+2019-04-18 09:50:15,098 - DEBUG - Epoch=1, iteration=300
+2019-04-18 09:50:31,729 - INFO - Perplexity on training data after epoch 1: 1024.81
+2019-04-18 09:51:06,706 - DEBUG - Epoch=2, iteration=100
+2019-04-18 09:51:40,598 - DEBUG - Epoch=2, iteration=200
+2019-04-18 09:52:14,600 - DEBUG - Epoch=2, iteration=300
+2019-04-18 09:52:31,154 - INFO - Perplexity on training data after epoch 2: 625.64
+2019-04-18 09:53:07,757 - DEBUG - Epoch=3, iteration=100
+2019-04-18 09:53:41,754 - DEBUG - Epoch=3, iteration=200
+2019-04-18 09:54:15,699 - DEBUG - Epoch=3, iteration=300
+2019-04-18 09:54:32,348 - INFO - Perplexity on training data after epoch 3: 474.90
+2019-04-18 09:55:09,056 - DEBUG - Epoch=4, iteration=100
+2019-04-18 09:55:42,953 - DEBUG - Epoch=4, iteration=200
+2019-04-18 09:56:16,949 - DEBUG - Epoch=4, iteration=300
+2019-04-18 09:56:33,584 - INFO - Perplexity on training data after epoch 4: 381.75
+2019-04-18 09:57:10,350 - DEBUG - Epoch=5, iteration=100
+2019-04-18 09:57:44,399 - DEBUG - Epoch=5, iteration=200
+2019-04-18 09:58:18,278 - DEBUG - Epoch=5, iteration=300
+2019-04-18 09:58:34,803 - INFO - Perplexity on training data after epoch 5: 324.70
+2019-04-18 09:59:11,190 - DEBUG - Epoch=6, iteration=100
+2019-04-18 09:59:45,153 - DEBUG - Epoch=6, iteration=200
+2019-04-18 10:00:19,158 - DEBUG - Epoch=6, iteration=300
+2019-04-18 10:00:35,803 - INFO - Perplexity on training data after epoch 6: 286.45
+2019-04-18 10:01:11,961 - DEBUG - Epoch=7, iteration=100
+2019-04-18 10:01:45,827 - DEBUG - Epoch=7, iteration=200
+2019-04-18 10:02:19,820 - DEBUG - Epoch=7, iteration=300
+2019-04-18 10:02:36,556 - INFO - Perplexity on training data after epoch 7: 259.41
+2019-04-18 10:03:12,956 - DEBUG - Epoch=8, iteration=100
+2019-04-18 10:03:46,914 - DEBUG - Epoch=8, iteration=200
+2019-04-18 10:04:20,820 - DEBUG - Epoch=8, iteration=300
+2019-04-18 10:04:37,314 - INFO - Perplexity on training data after epoch 8: 239.04
+2019-04-18 10:05:14,030 - DEBUG - Epoch=9, iteration=100
+2019-04-18 10:05:47,876 - DEBUG - Epoch=9, iteration=200
+2019-04-18 10:06:21,708 - DEBUG - Epoch=9, iteration=300
+2019-04-18 10:06:38,320 - INFO - Perplexity on training data after epoch 9: 222.47
+2019-04-18 10:07:14,984 - DEBUG - Epoch=10, iteration=100
+2019-04-18 10:07:49,042 - DEBUG - Epoch=10, iteration=200
+2019-04-18 10:08:23,111 - DEBUG - Epoch=10, iteration=300
+2019-04-18 10:08:39,797 - INFO - Perplexity on training data after epoch 10: 208.25

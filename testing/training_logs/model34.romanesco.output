@@ -1,0 +1,101 @@
+nohup: ignoring input
+2019-04-27 17:34:41,916 - INFO - Namespace(action='train', batch_size=32, data='/home/munchi/u04/data/all.lb.train', embedding_size=256, epochs=50, hidden_size=1024, log_to='/home/munchi/u04/results/training_logs/model34', num_steps=100, patience=5, quiet=False, save_to='/home/munchi/u04/results/models/model34', val_data='/home/munchi/u04/data/all.lb.val', val_epochs=1, vocab_max_size=10000)
+2019-04-27 17:34:41,916 - INFO - Saving model config to '/home/munchi/u04/results/models/model34/config.json'.
+2019-04-27 17:34:46.174102: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-04-27 17:34:48.201757: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-04-27 17:34:48.202383: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55ba7ad6d800 executing computations on platform CUDA. Devices:
+2019-04-27 17:34:48.202418: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): Tesla K80, Compute Capability 3.7
+2019-04-27 17:34:48.205421: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2019-04-27 17:34:48.206356: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55ba7add77a0 executing computations on platform Host. Devices:
+2019-04-27 17:34:48.206386: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-04-27 17:34:48.206709: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:04.0
+totalMemory: 11.17GiB freeMemory: 11.10GiB
+2019-04-27 17:34:48.206751: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-04-27 17:34:48.207574: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-27 17:34:48.207593: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-04-27 17:34:48.207600: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-04-27 17:34:48.207853: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10802 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:04.0, compute capability: 3.7)
+2019-04-27 17:34:50.746869: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+2019-04-27 17:35:35,482 - DEBUG - Epoch=1, iteration=100
+2019-04-27 17:36:19,922 - DEBUG - Epoch=1, iteration=200
+2019-04-27 17:37:04,461 - DEBUG - Epoch=1, iteration=300
+2019-04-27 17:37:14,299 - INFO - Perplexity on training data after epoch 1: 267.92
+2019-04-27 17:37:16,113 - INFO - Current model perplexity on validation data: 133.68
+2019-04-27 17:37:16,114 - INFO - Lowest perplexity on validation data achieved
+2019-04-27 17:38:01,202 - DEBUG - Epoch=2, iteration=100
+2019-04-27 17:38:45,851 - DEBUG - Epoch=2, iteration=200
+2019-04-27 17:39:30,647 - DEBUG - Epoch=2, iteration=300
+2019-04-27 17:39:40,481 - INFO - Perplexity on training data after epoch 2: 117.43
+2019-04-27 17:39:42,240 - INFO - Current model perplexity on validation data: 102.50
+2019-04-27 17:39:42,240 - INFO - Lowest perplexity on validation data achieved
+2019-04-27 17:40:27,459 - DEBUG - Epoch=3, iteration=100
+2019-04-27 17:41:12,318 - DEBUG - Epoch=3, iteration=200
+2019-04-27 17:41:56,838 - DEBUG - Epoch=3, iteration=300
+2019-04-27 17:42:06,636 - INFO - Perplexity on training data after epoch 3: 93.67
+2019-04-27 17:42:08,417 - INFO - Current model perplexity on validation data: 89.96
+2019-04-27 17:42:08,418 - INFO - Lowest perplexity on validation data achieved
+2019-04-27 17:42:53,828 - DEBUG - Epoch=4, iteration=100
+2019-04-27 17:43:38,453 - DEBUG - Epoch=4, iteration=200
+2019-04-27 17:44:23,159 - DEBUG - Epoch=4, iteration=300
+2019-04-27 17:44:32,943 - INFO - Perplexity on training data after epoch 4: 79.81
+2019-04-27 17:44:34,706 - INFO - Current model perplexity on validation data: 83.66
+2019-04-27 17:44:34,706 - INFO - Lowest perplexity on validation data achieved
+2019-04-27 17:45:20,207 - DEBUG - Epoch=5, iteration=100
+2019-04-27 17:46:05,052 - DEBUG - Epoch=5, iteration=200
+2019-04-27 17:46:49,794 - DEBUG - Epoch=5, iteration=300
+2019-04-27 17:46:59,592 - INFO - Perplexity on training data after epoch 5: 70.44
+2019-04-27 17:47:01,381 - INFO - Current model perplexity on validation data: 80.13
+2019-04-27 17:47:01,381 - INFO - Lowest perplexity on validation data achieved
+2019-04-27 17:47:46,475 - DEBUG - Epoch=6, iteration=100
+2019-04-27 17:48:31,082 - DEBUG - Epoch=6, iteration=200
+2019-04-27 17:49:15,740 - DEBUG - Epoch=6, iteration=300
+2019-04-27 17:49:25,556 - INFO - Perplexity on training data after epoch 6: 63.20
+2019-04-27 17:49:27,328 - INFO - Current model perplexity on validation data: 78.12
+2019-04-27 17:49:27,328 - INFO - Lowest perplexity on validation data achieved
+2019-04-27 17:50:12,442 - DEBUG - Epoch=7, iteration=100
+2019-04-27 17:50:57,279 - DEBUG - Epoch=7, iteration=200
+2019-04-27 17:51:41,956 - DEBUG - Epoch=7, iteration=300
+2019-04-27 17:51:51,807 - INFO - Perplexity on training data after epoch 7: 57.15
+2019-04-27 17:51:53,587 - INFO - Current model perplexity on validation data: 77.08
+2019-04-27 17:51:53,587 - INFO - Lowest perplexity on validation data achieved
+2019-04-27 17:52:38,631 - DEBUG - Epoch=8, iteration=100
+2019-04-27 17:53:23,202 - DEBUG - Epoch=8, iteration=200
+2019-04-27 17:54:07,839 - DEBUG - Epoch=8, iteration=300
+2019-04-27 17:54:17,757 - INFO - Perplexity on training data after epoch 8: 51.88
+2019-04-27 17:54:19,543 - INFO - Current model perplexity on validation data: 77.06
+2019-04-27 17:54:19,543 - INFO - Lowest perplexity on validation data achieved
+2019-04-27 17:55:04,640 - DEBUG - Epoch=9, iteration=100
+2019-04-27 17:55:49,255 - DEBUG - Epoch=9, iteration=200
+2019-04-27 17:56:34,107 - DEBUG - Epoch=9, iteration=300
+2019-04-27 17:56:43,922 - INFO - Perplexity on training data after epoch 9: 47.25
+2019-04-27 17:56:45,695 - INFO - Current model perplexity on validation data: 77.59
+2019-04-27 17:57:30,419 - DEBUG - Epoch=10, iteration=100
+2019-04-27 17:58:14,978 - DEBUG - Epoch=10, iteration=200
+2019-04-27 17:58:59,530 - DEBUG - Epoch=10, iteration=300
+2019-04-27 17:59:09,338 - INFO - Perplexity on training data after epoch 10: 43.19
+2019-04-27 17:59:11,102 - INFO - Current model perplexity on validation data: 78.50
+2019-04-27 17:59:55,856 - DEBUG - Epoch=11, iteration=100
+2019-04-27 18:00:40,475 - DEBUG - Epoch=11, iteration=200
+2019-04-27 18:01:25,162 - DEBUG - Epoch=11, iteration=300
+2019-04-27 18:01:35,018 - INFO - Perplexity on training data after epoch 11: 39.60
+2019-04-27 18:01:36,805 - INFO - Current model perplexity on validation data: 80.00
+2019-04-27 18:02:21,486 - DEBUG - Epoch=12, iteration=100
+2019-04-27 18:03:06,051 - DEBUG - Epoch=12, iteration=200
+2019-04-27 18:03:50,660 - DEBUG - Epoch=12, iteration=300
+2019-04-27 18:04:00,505 - INFO - Perplexity on training data after epoch 12: 36.37
+2019-04-27 18:04:02,287 - INFO - Current model perplexity on validation data: 81.74
+2019-04-27 18:04:47,184 - DEBUG - Epoch=13, iteration=100
+2019-04-27 18:05:31,815 - DEBUG - Epoch=13, iteration=200
+2019-04-27 18:06:16,398 - DEBUG - Epoch=13, iteration=300
+2019-04-27 18:06:26,325 - INFO - Perplexity on training data after epoch 13: 33.46
+2019-04-27 18:06:28,236 - INFO - Current model perplexity on validation data: 83.93
+2019-04-27 18:06:28,236 - INFO - No improvement in validation data perplexity for 5 epochs: terminating training
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+

@@ -82,17 +82,18 @@ def sample(length: int = C.SAMPLE_LENGTH,
                     sampled_symbol = np.random.choice(range(vocab.size), p=next_symbol_probs)
 
     words = vocab.get_words(sampled_sequence)
+    word_sequence = ' '.join(words)
 
     # Remove end-of-sentence markers
-    word_sequence = ' '.join(words).replace(' ' + C.EOS + ' ', '\n')
+    word_sequence = re.sub(r'\s+' + C.EOS + r'\s*', '\n', word_sequence)
 
     # Remove unnecessary whitespace (preceding/following punctuation)
     word_sequence = re.sub(r'\s+([,;:!?.”)—])', r'\1', word_sequence)
     word_sequence = re.sub(r'([“(])\s+', r'\1', word_sequence)
 
-    # Convert mid-line linebreak markers to newlines
+    # Convert linebreak markers to newlines if they don't appear at the line beginning
     word_sequence = re.sub('^' + C.LBR + r'\s+', '', word_sequence)
-    word_sequence = re.sub('\s+' + C.LBR + '$', '', word_sequence)
+    word_sequence = re.sub(r'\s+' + C.LBR + '$', '', word_sequence)
     word_sequence = re.sub(r'\s+' + C.LBR + r'\s+', '\n', word_sequence)
 
     return word_sequence

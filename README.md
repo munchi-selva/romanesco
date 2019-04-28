@@ -1,7 +1,23 @@
 # romanesco
 
-A vanilla recurrent neural network (RNN) language model, optimized for Shakespearean texts.
+A vanilla recurrent neural network (RNN) language model. 
 Supports model training, text scoring, and text generation.
+Optimized for Shakespearean texts for MT FS 2019 exercise 4.
+
+## Directory contents
+- bin/
+  - Script for launching romanesco
+- doc/
+  - Description and visualization of data collection and preprocessing, coding, and model training conducted for MT exercise 4
+- preprocessing/scripts/
+  - Scripts for retrieving XML editions of Shakespeare's works (output is placed in preprocessing/source_xml/)
+  - Scripts for converting XML into format suitable for romanesco input (output is placed in preprocessing/extracted_data/)
+- romanesco/
+  - Core scripts for model training, scoring, text generation
+- testing/
+  - Details of experiments with models using different hyperparameters, datasets, etc.
+- util/
+  - Miscellaneous utilities
 
 ## Installation
 

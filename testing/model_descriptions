@@ -432,3 +432,22 @@ Result:         Stopped after 13 epochs due to no additional improvement, i.e
                 Perplexity on training data: 51.88
                 Perplexity on validation data: 77.06
                 Perplexity on test data: 73.39
+
+
+model35
+=======
+Romanesco:      Fixed Shakespearean tokenization (() handling), including
+                linebreaks, line-leading linebreaks allowed,
+                romanesco 0.2 defaults,
+                epochs 50,
+                batch size = 32,
+                early stopping - validation at each epoch, patience 5
+Training data:  histories.lb.train (PlayShakespeare)
+Dev data:       histories.lb.dev
+Test data:      histories.lb.dev
+Preprocessing:  gen_play_sents.py
+Result:         Stopped after 13 epochs due to no additional improvement, i.e
+                best validation performance at epoch 8
+                Perplexity on training data: 52.02
+                Perplexity on validation data: 76.62
+                Perplexity on test data: 72.47

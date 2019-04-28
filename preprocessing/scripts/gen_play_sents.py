@@ -78,6 +78,22 @@ def getPlaySents(playFilename: str, sentFilename: str,
         # Split the block into individual sentences, using NLTK's sentence
         # tokenizer. This works relatively well for Shakespearean text.
         #
+        # An example of XML (from ps_king_richard_ii.xml) and corresponding extracted sentences:
+        #   <speech>
+        #       <line globalnumber="588" number="306" form="verse">Then England&#8217;s ground, farewell, sweet soil, <foreign xml:lang="fr">adieu</foreign>;</line>
+        #       <line globalnumber="589" number="307" form="verse">My mother, and my nurse, that bears me yet!</line>
+        #       <line globalnumber="590" number="308" form="verse">Where e&#8217;er I wander, boast of this I can,</line>
+        #       <line globalnumber="591" number="309" form="verse">Though banish&#8217;d, yet a true-born Englishman.</line>
+        #   </speech>
+        #
+        #   If original linebreaks are NOT included as special tokens:
+        #   Sentence 1 = Then England’s ground, farewell, sweet soil,  adieu ; My mother, and my nurse, that bears me yet!
+        #   Sentence 2 = Where e’er I wander, boast of this I can, Though banish’d, yet a true-born Englishman.
+        #
+        #   If original linebreaks are included as special tokens:
+        #   Sentence 1 = Then England’s ground, farewell, sweet soil,  adieu ; <LBR> My mother, and my nurse, that bears me yet!
+        #   Sentence 2 = <LBR> Where e’er I wander, boast of this I can, <LBR> Though banish’d, yet a true-born Englishman.
+        #
         for speech in playTree.findall(PS_TAG_SPEECH):
             #
             # itertext() includes the textual content of children of the line element
